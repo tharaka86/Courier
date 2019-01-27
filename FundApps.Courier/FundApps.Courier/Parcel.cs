@@ -2,11 +2,18 @@
 
 namespace FundApps.Courier
 {
-    public class Parcel
+    public abstract class Parcel
     {
-        public int Height { get; set; }
-        public int Width { get; set; }
-        public int Length { get; set; }
+        public int Height { get; private set; }
+        public int Width { get; private set; }
+        public int Length { get; private set; }
+        public  abstract int Price { get; }
 
+        public Parcel(int height, int width, int length)
+        {
+            Height = height;
+            Width = width;
+            Length = length;
+        }
     }
 }
