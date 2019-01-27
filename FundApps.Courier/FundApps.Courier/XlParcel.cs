@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FundApps.Courier
+﻿namespace FundApps.Courier
 {
     public class XlParcel : Parcel
     {
-        public XlParcel(int height, int width, int length) : base(height, width, length)
+        public XlParcel(int height, int width, int length, int weight) : base(height, width, length, weight)
         {
         }
 
         public override int Price => 25;
+
+        public override int WeightLimit => 10;
     }
 }
