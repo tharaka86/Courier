@@ -20,7 +20,7 @@ namespace FundApps.Courier
         public  abstract int Price { get; }
         public abstract int WeightLimit { get; }
 
-       
+       //some comment
         private int CalculateExtraWeight()
         {
             return Weight > WeightLimit ? Weight - WeightLimit : 0;
